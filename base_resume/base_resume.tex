@@ -1,0 +1,231 @@
+%-------------------------
+% Resume in Latex
+% Author : Harshibar
+% Based off of: https://github.com/jakeryang/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+% fontawesome
+\usepackage{fontawesome5}
+
+% light-grey
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+% custom underline
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+% custom font: helvetica-style
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\renewcommand*\familydefault{\sfdefault}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.55in}
+\addtolength{\textheight}{1.0in}
+\setlength{\footskip}{4.08003pt}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Tighten section spacing
+\titlespacing*{\section}{0pt}{8pt}{5pt}
+
+% Tighten item spacing
+\setlist[itemize]{itemsep=2pt, topsep=3pt, parsep=0pt}
+
+% sans serif sections
+\titleformat{\section}{
+    \bfseries \vspace{2pt} \raggedright \large
+}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\
+      \textit{#3} & {\color{dark-grey} \small #4}\\
+    \end{tabular*}\vspace{2pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & {\color{dark-grey}} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\color{text-grey}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge Ayush Kumar Singh} \\ \vspace{5pt}
+    \small 
+    \faPhone* \texttt{9305010425} \hspace{1pt} $|$
+    \hspace{1pt} \faEnvelope \hspace{2pt} \texttt{ayushsingh07feb@gmail.com} \hspace{1pt} $|$ 
+    \hspace{1pt} \href{https://github.com/ayushhsinghhh}{\faGithubSquare \hspace{2pt} \texttt{GitHub}} \hspace{1pt} $|$
+    \hspace{1pt} \href{https://www.linkedin.com/in/ayushkr-singh/}{\faLinkedin \hspace{2pt} \texttt{LinkedIn}}
+    \\ \vspace{-3pt}
+\end{center}
+
+%-----------EXPERIENCE-----------
+\section{EXPERIENCE}
+ \vspace{4pt}
+
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Fincepta}{Aug. 2025 -- Present}
+      {AI/ML Intern}{Gurgaon, India}
+    \resumeItemListStart
+    \resumeItem{Built \textbf{Enrichment Agent} that parses \textbf{BS, IS, and CF statements} into structured spreadsheets --- \textbf{matched 3 credit analysts across 12 companies} —-- exact revenue extraction, \textbf{<2\% deviation} on EBITDA, Debt, and Liquidity}
+  \resumeItem{Cut a \textbf{production bottleneck from 11 hrs → 21 mins (31x faster)} by re-engineering the \textbf{SMB transaction pipeline} with \textbf{Aho-Corasick trie matching}, directly unblocking a \textbf{revenue-critical scaling constraint}}
+    \resumeItem{Designed \textbf{self-learning SMB enrichment pipeline} spanning extraction, labeling, and model updates; optimized \textbf{cost-latency trade-offs} to support continuous model improvement}
+    \resumeItem{Shipped \textbf{LangGraph} chat agent with \textbf{Redis} session caching enabling state rollback and persistent outputs, reducing repeat query load}
+\resumeItemListEnd
+
+    \resumeSubheading
+      {IIT Indore Drishti CPS}{Jun. 2024 -- Aug. 2024}
+      {Deep Learning Intern}{Remote}
+      \resumeItemListStart
+        \resumeItem{\textbf{Increased trading strategy profitability by 82.41\%}; created \textbf{Hurst Exponent} and WMA features with \textbf{Bayesian change point analysis} to forecast market windows}
+        \resumeItem{Generated embeddings from statistical features; leveraged feature similarity for regime detection, resulting in a significant increase in AUM}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+%-----------PROGRAMMING SKILLS-----------
+\section{SKILLS}
+ \vspace{4pt}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{Languages} {: Python, C/C++, %Java, 
+     SQL (PostgreSQL), JavaScript (React.js)}\vspace{2pt} \\
+     \textbf{Tools \& Frameworks} {: LangChain, LangGraph, LlamaIndex, Agno, n8n, FastAPI, Redis, TensorFlow, Neo4j, MLFlow, PySpark, OpenCV, Node.js, AWS, Linux}
+    }}
+ \end{itemize}
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+ \vspace{4pt}
+    \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+    {\textbf{Personal Work Agent} \href{https://github.com/ayushhsinghhh/work-assistant-whisper}{\faGithub} $|$ \emph{Voice-to-Workflow Automation System}}{Mar. 2026}
+        \resumeItemListStart
+          \resumeItem{Designed an end-to-end voice automation pipeline using \textbf{Whisper} (local STT), \textbf{FastAPI}, and \textbf{n8n} — capturing Slack voice notes via webhook events, transcribing audio, and storing timestamped daily logs with concurrent file-locking}
+          \resumeItem{Built a \textbf{multi-agent LLM system} (LangChain + Groq \textbf{LLaMA 3.3-70B}) with 4 REST endpoints that auto-drafts EOD updates, PR descriptions, and LinkedIn posts from raw transcripts — reducing daily reporting time by \textbf{\textasciitilde30 mins/day}}
+        \resumeItemListEnd
+        
+      % \resumeProjectHeading
+      %     {\textbf{Advertisement Generator} $|$ \emph{LLaMA-3, ORPO, QLoRA, CommonCrawl}}{Aug. 2024 -- Present}
+      %     \resumeItemListStart
+      %       \resumeItem{Fine-tuned a \textbf{domain-specific LLM} on ad scripts using \textbf{Odds Ratio Preference Optimization}}
+      %       \resumeItem{Enabled \textbf{multilingual, customizable ad generation}; outperformed general-purpose LLMs in creativity and engagement metrics}
+      %     \resumeItemListEnd
+
+      \resumeProjectHeading
+        {\textbf{GeoWatch} \href{https://glof-plum.vercel.app/}{\faLink} $|$ \emph{Early Warning System for GLOFs}}{Sept. 2024 -- Oct. 2024}
+        \resumeItemListStart
+            \resumeItem{Led \textbf{team of 6} building a real-time glacial lake monitoring system using MODIS, QGIS (NDWI, NDSI, DEM), and \textbf{TensorFlow} autoregressive forecasting (\textbf{MSE: 0.6})}
+            \resumeItem{Designed modular \textbf{ML pipelines} for preprocessing and deployment; built frontend in \textbf{React.js} and Three.js}
+        \resumeItemListEnd
+    
+
+    \resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS-----------
+\section{PUBLICATIONS}
+\vspace{4pt}
+\resumeItemListStart
+    \resumeItem{\href{https://doi.org/10.1007/s00371-025-03929-2}{\textbf{Enhancing Architectural Floor Plan Generation with Robust Loss Functions}} $|$ \textit{The Visual Computer}, Springer (2025) $|$ Ali, M.M., \underline{Singh, A.K.} et al.}
+\resumeItemListEnd
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+ \vspace{4pt}
+
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Bennett University}{Sep. 2022 -- May 2026}
+      {Bachelor of Technology in Computer Science}{9.36 CGPA}
+      % \resumeItemListStart
+      %   % \resumeItem{\textbf{Coursework}: Artificial Intelligence, Machine Learning, Data Structures, Algorithms, Databases, Computer Systems}
+      % \resumeItemListEnd
+
+    \resumeSubheading
+      {City Montessori School}{2021}
+      {Class XII (ICSE)}{95\%}
+  \resumeSubHeadingListEnd
+
+\section{Achievements}
+ \vspace{4pt}
+ \resumeItemListStart
+    \resumeItem{Secured 8th position in college round for SIH 2024}
+    \resumeItem{Placed 2nd in power-lifting under 66kg category in college sports fest.}
+\resumeItemListEnd
+\end{document}
