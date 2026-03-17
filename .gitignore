@@ -22,3 +22,7 @@ Thumbs.db
 
 # Output (tailored resumes go to D:\acc\applications)
 output/
+
+# Environment variables (local secrets)
+.env.local
+.env

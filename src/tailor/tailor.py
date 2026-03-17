@@ -19,8 +19,21 @@ except ImportError:
 from .latex_parser import LaTeXParser
 from .prompts import SYSTEM_PROMPT, create_tailor_prompt
 
-# Groq configuration - set GROQ_API_KEY environment variable
+# Groq configuration - set GROQ_API_KEY environment variable or use .env.local
 GROQ_API_KEY = os.environ.get('GROQ_API_KEY')
+
+# Try loading from .env.local if not set
+if not GROQ_API_KEY:
+    env_path = os.path.join(os.path.dirname(__file__), "..", "..", ".env.local")
+    if os.path.exists(env_path):
+        with open(env_path) as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith('#') and '=' in line:
+                    key, val = line.split('=', 1)
+                    if key == 'GROQ_API_KEY':
+                        GROQ_API_KEY = val
+                        break
 MODEL = 'llama-3.3-70b-versatile'
 
 
